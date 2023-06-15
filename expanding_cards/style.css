@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main .card-section {
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;
+    align-items: center;  
+    height: 100%;
+    width: 90vw;
+    /* background-color: red; */
+}
+
+.card-section .card {
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    border-radius: 4rem;
+    cursor: pointer;
+    flex: 0.1;
+    margin: 1rem;
+    position: relative;
+    color: #ffffff;
+    transition: flex 0.7s ease-in;
+}
+
+.card-section .card h3 {
+    position: absolute;
+    font-size: 2rem;
+    margin: 0;
+    bottom: 1rem;
+    left: 2rem;
+    font-weight: 500;
+    opacity: 0;
+}
+
+.card.active {
+    flex: 1;
+}
+
+.card.active h3 {
+    opacity: 1;
+    transition: opacity 0.4s ease-in 0.4s;
+}
