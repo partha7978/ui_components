@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700;900&display=swap');
 
+:root {
+    --progress-color: rgb(60, 73, 255);
+    --normal-bar-color: #e0e0e0;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -38,12 +43,70 @@ body {
     position: relative;
 }
 
-.progress-bar {
+.progress-section:before {
+    content: '';
     position: absolute;
-    background-color: aqua;
+    background-color: var(--normal-bar-color);
     height: 5px;
     top: 50%;
     left: 0;
-    width: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    animation: 0.2s ease infinite;
+    z-index: -1;
+}
+
+.progress-bar {
+    position: absolute;
+    background-color: var(--progress-color);
+    height: 5px;
+    top: 50%;
+    left: 0;
+    width: 0%;
+    transition: all 0.1s ease-in;
     transform: translateY(-50%); /* to center the progress bar */
+    z-index: -1;
+}
+
+.number {
+    font-size: 1rem;
+    height: 1.7rem;
+    width: 1.7rem;
+    background-color: var(--normal-bar-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.1s ease-in;
+}
+
+.active {
+    background-color: var(--normal-bar-color);
+    border: 3px solid var(--progress-color);
+}
+
+.button-section {
+    display: flex;
+}
+
+.button-section button {
+    padding: 0.4rem 1.6rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    background-color: var(--progress-color);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.3s linear;
+    font-weight: 700;
+}
+
+.button-section button:hover {
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: var(--normal-bar-color);
 }
