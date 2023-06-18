@@ -110,3 +110,24 @@ body {
 button:disabled {
     background-color: var(--normal-bar-color);
 }
+
+@media (max-width: 700px) {
+    .main-container {
+        margin: 0.5rem;
+    }
+    
+    .progress-section {
+        width: 90%;
+        margin: 2rem 1rem;
+    } 
+    
+    .number {
+        font-size: 0.7rem;
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+    
+    .button-section button {
+        padding: 0.4rem 1.4rem;
+    }
+}
