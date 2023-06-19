@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(164, 158, 255);
+}
+
+.main-container {
+    min-height: 100vh;
+    width: 100vw;
+    transition: 0.3s linear;
+    background-color: rgb(255, 255, 255);
+    transform-origin: top left;
+    padding: 50px;
+}
+
+.main-container .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .main-content .card {
+    width: 50vw;
+    margin: 1rem;
+}
+
+.card h1 {
+    font-size: 1.7rem;
+}
+
+.card img {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.rotate {
+    transform: rotate(-20deg);
+}
+
+.circle-navbar {
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: rgb(180, 88, 255);
+    position: relative;
+    transition: 0.3s linear;
+}
+
+.circle .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-size: 2rem;
+    height: 100px;
+}
+
+.icon[name="menu-outline"] {
+    left: 60%;
+}
+
+.icon[name="close-outline"] {
+    transform-origin: top left;
+    top: 60%;
+    transform: rotate(90deg);
+}
+
