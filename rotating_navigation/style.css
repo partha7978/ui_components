@@ -16,7 +16,7 @@ body {
 .main-container {
     min-height: 100vh;
     width: 100vw;
-    transition: 0.3s linear;
+    transition: 0.5s linear;
     background-color: rgb(255, 255, 255);
     transform-origin: top left;
     padding: 50px;
@@ -53,13 +53,17 @@ body {
     left: -100px;
 }
 
+.main-container.rotate .circle-navbar {
+    transform: rotate(-70deg);
+}
+
 .circle {
     height: 200px;
     width: 200px;
     border-radius: 50%;
     background-color: rgb(180, 88, 255);
     position: relative;
-    transition: 0.3s linear;
+    transition: 0.5s linear;
 }
 
 .circle .icon {
@@ -81,3 +85,35 @@ body {
     transform: rotate(90deg);
 }
 
+.navbar {
+    position: fixed;
+    bottom: 30px;
+    left: 10px;
+    transform: translateX(-100px);
+}
+     
+.navbar ul li {
+    list-style: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    margin: 1rem 0.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar ul li + li {
+    margin-left: 2rem;
+    transform: translateX(-150px);
+}
+
+.navbar ul li + li + li {
+    margin-left: 4rem;
+    transform: translateX(-200px);
+}
+
+.main-container.rotate + .navbar, .main-container.rotate + .navbar li{
+    transform: translateX(0);
+    transition-delay: 0.3s;
+}
