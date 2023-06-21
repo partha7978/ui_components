@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Bebas Neue", sans-serif;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #118ab2;
+    background-image: linear-gradient(
+        319deg,
+        #118ab2 0%,
+        #06d6a0 37%,
+        #ffd166 100%
+    );
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container button.search-btn {
+    height: 50px;
+    width: 50px;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transition: transform 0.3s ease;
+    background-color: #fff;
+}
+
+.container input.text {
+    padding: 1rem;
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 50px;
+    transition: width 0.3s ease;
+}
+
+/* after clicking button */
+
+.container input:focus, .container button:focus {
+    outline: none;
+}
+
+.expand input.text {
+    width: 200px;
+}
+
+.expand button.search-btn {
+    transform: translateX(198px);
+}
