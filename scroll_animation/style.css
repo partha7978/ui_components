@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Bebas Neue", sans-serif;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+h3 {
+    margin: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card {
+    height: 200px;
+    width: 400px;
+    background-color: rgb(165, 159, 255);
+    margin: 0.5rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(400%);
+    transition: transform 0.4s ease-in-out;
+}
+
+/* here I'm putting all then even number cards to the left. */
+.card:nth-of-type(even) {
+    transform: translateX(-400%)
+}
+
+.card.show {
+    transform: translateX(0);
+}
