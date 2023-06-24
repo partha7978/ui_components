@@ -16,6 +16,7 @@ function load() {
     background.style.filter = `blur(${mapNumber(loading, 0, 100, 30, 0)}px)`
 }
 
+// https://stackoverflow.com/questions/10756313/javascript-jquery-map-a-range-of-numbers-to-another-range-of-numbers
 function mapNumber (number, inMin, inMax, outMin, outMax) {
     return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
 }
