@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Bebas Neue", sans-serif;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+section {
+    height: 100%;
+    width: 50%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+section.left {
+    left: 0;
+    background: url('https://images.unsplash.com/photo-1518908336710-4e1cf821d3d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHBzNXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section.right {
+    right: 0;
+    background: url('https://images.unsplash.com/photo-1605901309584-818e25960a8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8eGJveHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+section h3 {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+}
+
+section.right h3 {
+    color: rgb(0, 0, 0);
+}
+
+section a {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 10rem;
+    border: 0.5px solid rgb(255, 255, 255);
+    padding: 0.9rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+section.right a {
+    border-color: #000;
+    color:rgb(0, 0, 0);
+}
+
+.container.left-slide .left {
+    width: 75%;
+}
+
+.container.left-slide .right {
+    width: 25%;
+}
