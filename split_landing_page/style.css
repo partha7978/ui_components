@@ -60,6 +60,7 @@ section::before {
 section h3 {
     font-size: 3rem;
     color: rgb(255, 255, 255);
+    z-index: 10;
 }
 
 section.right h3 {
@@ -77,6 +78,12 @@ section a {
     padding: 0.9rem;
     color: rgb(255, 255, 255);
     cursor: pointer;
+    z-index: 10;
+    transition: transform 0.2s ease;
+}
+
+section a:hover {
+    transform: translateY(-5px);
 }
 
 section.right a {
@@ -84,10 +91,18 @@ section.right a {
     color:rgb(0, 0, 0);
 }
 
-.container.left-slide .left {
+.container.left-side .left {
     width: 75%;
 }
 
-.container.left-slide .right {
+.container.left-side .right {
+    width: 25%;
+}
+
+.container.right-side .right {
+    width: 75%;
+}
+
+.container.right-side .left {
     width: 25%;
 }
