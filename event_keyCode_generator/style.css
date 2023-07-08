@@ -54,3 +54,45 @@ main section.heading span {
     color: #000000;
 }
 
+main section.event {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+main section.event .card {
+    width: 10rem;
+    height: 10rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+
+main section.event .card:hover {
+    transform: scale(1.04);
+}
+
+section.event .card small {
+    position: absolute;
+    top: 0.5rem;
+    font-size: 0.8rem;
+    color: #000000;
+}
+
+section.event .card h4 {
+    font-size: 1.2rem;
+    color: #000000;
+    letter-spacing: 0.1rem;
+}
+
